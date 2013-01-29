@@ -9,8 +9,9 @@
   (package-refresh-contents))
 
 ;; Package list
-(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-bindings starter-kit-ruby starter-kit-eshell) "Package list to be autoinstalled.")
+(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-bindings starter-kit-ruby starter-kit-eshell zenburn-theme markdown-mode markdown-mode+ color-theme) "Package list to be autoinstalled.")
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
