@@ -1,3 +1,4 @@
+;; PACKAGE SOURCES
 (require 'package)
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
@@ -5,17 +6,26 @@
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
+;; Refresh package sources
 (when (not package-archive-contents)
   (package-refresh-contents))
 
-;; Package list
+;; PACKAGE LIST
 (defvar my-packages '(starter-kit starter-kit-lisp starter-kit-bindings starter-kit-ruby starter-kit-eshell zenburn-theme markdown-mode markdown-mode+ color-theme) "Package list to be autoinstalled.")
 
+;; Install packages from package list
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
 
+;; MODE SPECIFIC
 
+;; markdown-mode
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+
+;; THEME SPECIFIC
+
+;; zenburn
+(load-theme 'zenburn t)
