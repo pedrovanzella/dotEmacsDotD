@@ -11,7 +11,7 @@
   (package-refresh-contents))
 
 ;; PACKAGE LIST
-(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-bindings starter-kit-ruby starter-kit-eshell zenburn-theme markdown-mode markdown-mode+ color-theme) "Package list to be autoinstalled.")
+(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-bindings starter-kit-ruby starter-kit-eshell zenburn-theme markdown-mode markdown-mode+ color-theme yaml-mode) "Package list to be autoinstalled.")
 
 ;; Install packages from package list
 (dolist (p my-packages)
@@ -24,6 +24,11 @@
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+
+;; yaml-mode
+(autoload 'yaml-mode "yaml-mode"
+  "Major mode for editing YAML files" t)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
 ;; THEME SPECIFIC
 
