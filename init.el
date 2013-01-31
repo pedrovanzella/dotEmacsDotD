@@ -30,6 +30,9 @@
   "Major mode for editing YAML files" t)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
+;; shell-script-mode
+(add-to-list 'auto-mode-alist '("\\.zsh$" . shell-script-mode))
+
 ;; THEME SPECIFIC
 
 ;; zenburn
