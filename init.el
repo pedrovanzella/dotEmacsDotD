@@ -33,6 +33,13 @@
 ;; shell-script-mode
 (add-to-list 'auto-mode-alist '("\\.zsh$" . shell-script-mode))
 
+;; c-mode
+(setq c-default-style "k&r"
+      c-basic-offset 4)
+
+;; scheme-mode
+(require 'xscheme)
+
 ;; THEME SPECIFIC
 
 ;; zenburn
