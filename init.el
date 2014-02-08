@@ -11,7 +11,7 @@
   (package-refresh-contents))
 
 ;; PACKAGE LIST
-(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-bindings starter-kit-ruby starter-kit-eshell zenburn-theme markdown-mode markdown-mode+ color-theme yaml-mode) "Package list to be autoinstalled.")
+(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-bindings starter-kit-ruby starter-kit-eshell zenburn-theme markdown-mode markdown-mode+ color-theme yaml-mode evil) "Package list to be autoinstalled.")
 
 ;; Install packages from package list
 (dolist (p my-packages)
@@ -39,6 +39,10 @@
 
 ;; scheme-mode
 (require 'xscheme)
+
+;; evil-mode
+(require 'evil)
+(evil-mode 1)
 
 ;; THEME SPECIFIC
 
