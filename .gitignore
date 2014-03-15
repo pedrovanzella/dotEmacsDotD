@@ -1,3 +1,4 @@
+*~
 backups/*
 url
 elpa/*
@@ -6,3 +7,15 @@ auto-save-list/*
 places
 .\#*
 .smex-items
+/var/
+/auto-save-list/
+/backups/
+/elpa/
+/.cask
+/places
+/.smex-items
+/eshell
+/ac-comphist.dat
+/project-persist
+/.graphene-geometry
+/.python-environments
